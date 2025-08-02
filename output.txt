@@ -1,56 +1,13 @@
-Loading GPT-2 text generation model (this happens once)...
-/usr/local/lib/python3.11/dist-packages/huggingface_hub/utils/_auth.py:94: UserWarning: 
-The secret `HF_TOKEN` does not exist in your Colab secrets.
-To authenticate with the Hugging Face Hub, create a token in your settings tab (https://huggingface.co/settings/tokens), set it as secret in your Google Colab and restart your session.
-You will be able to reuse this secret in all of your notebooks.
-Please note that authentication is recommended but still optional to access public models or datasets.
-  warnings.warn(
-config.json: 100%
- 665/665 [00:00<00:00, 8.35kB/s]
-model.safetensors: 100%
- 548M/548M [00:09<00:00, 94.7MB/s]
-generation_config.json: 100%
- 124/124 [00:00<00:00, 6.96kB/s]
-tokenizer_config.json: 100%
- 26.0/26.0 [00:00<00:00, 1.31kB/s]
-vocab.json: 100%
- 1.04M/1.04M [00:00<00:00, 13.0MB/s]
-merges.txt: 100%
- 456k/456k [00:00<00:00, 16.2MB/s]
-tokenizer.json: 100%
- 1.36M/1.36M [00:00<00:00, 19.4MB/s]
+Loading models...
 Device set to use cpu
 No model was supplied, defaulted to distilbert/distilbert-base-uncased-finetuned-sst-2-english and revision 714eb0f (https://huggingface.co/distilbert/distilbert-base-uncased-finetuned-sst-2-english).
 Using a pipeline without specifying a model name and revision in production is not recommended.
-Loading sentiment analysis model (this happens once)...
-config.json: 100%
- 629/629 [00:00<00:00, 32.3kB/s]
-model.safetensors: 100%
- 268M/268M [00:03<00:00, 114MB/s]
-tokenizer_config.json: 100%
- 48.0/48.0 [00:00<00:00, 2.63kB/s]
-vocab.txt: 
- 232k/? [00:00<00:00, 2.70MB/s]
 Device set to use cpu
-AI models loaded successfully!
-📸 Instagram Caption & Hashtag Generator (Command Line) 📸
----------------------------------------------------------
-This tool generates captions, emojis, and hashtags for Instagram based on your text input.
-It uses publicly available AI models and does NOT require a Hugging Face token.
-Ensure you have an active internet connection for initial model download.
----------------------------------------------------------
-Enter a keyword or theme for your Instagram post (e.g., 'beautiful sunset', 'morning coffee', 'new pet'): welcome
-Truncation was not explicitly activated but `max_length` is provided a specific value, please use `truncation=True` to explicitly truncate examples to max length. Defaulting to 'longest_first' truncation strategy. If you encode pairs of sequences (GLUE-style) with the tokenizer you can select this strategy more precisely by providing a specific strategy to `truncation`.
-The following generation flags are not valid and may be ignored: ['early_stopping']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
-Setting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
-Both `max_new_tokens` (=256) and `max_length`(=80) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+Models loaded.
+It looks like you are running Gradio on a hosted Jupyter notebook, which requires `share=True`. Automatically setting `share=True` (you can turn this off by setting `share=False` in `launch()` explicitly).
 
-🧠 Generating Instagram content based on: 'welcome'...
+Colab notebook detected. To show errors in colab notebook, set debug=True in launch()
+* Running on public URL: https://47df3f29269d53117f.gradio.live
 
---- ✨ Generated Instagram Post ✨ ---
-Caption: For a more in depth look at the other major features in the game, check out our latest cover story on Steam, a look into the development process, and a peek into what's in store for the upcoming games. If you're new to the developer community, you can follow along by checking out some of our recent games on our Steam Community page.
-Emojis: 😊🔥🎉
-Hashtags: #lifestyle #nature #photooftheday #instagood #picoftheday #beautiful #fashion #discover #igers #happy
-------------------------------------------
+This share link expires in 1 week. For free permanent hosting and GPU upgrades, run `gradio deploy` from the terminal in the working directory to deploy to Hugging Face Spaces (https://huggingface.co/spaces)
 
-✅ Generated post successfully saved to: GeneratedInstagramPosts/instagram_post_20250801_041339.txt
