@@ -68,3 +68,7 @@ Credits:
 --------
 Built using OpenAI's GPT-2 model and Hugging Face Transformers library.
 Created to automate and simplify social media content creation using AI.
+
+
+BY- NITIKA PANDEY
+TOPIC- SOCIAL MEDIA CAPTION AND HASTAGE AI GENRATOR
